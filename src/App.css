@@ -1,0 +1,96 @@
+/* Main container */
+.app-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
+}
+
+/* Table wrapper for scrolling */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+/* Timetable */
+.timetable {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  color: #000 !important;
+  font-size: 14px;
+}
+
+.timetable th {
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.day-cell {
+  font-weight: bold;
+  background-color: #e3f2fd;
+}
+
+/* Time row text */
+.time-text {
+  font-size: 12px;
+  font-weight: normal;
+  color: #f1f1f1;
+}
+
+/* Subject styling */
+.subject-text {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Teacher styling */
+.teacher-text {
+  font-size: 13px;
+  color: #333;
+  display: block;
+}
+
+/* Lab cell */
+.lab-cell {
+  background-color: #a5d6a7;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+/* Lunch cell */
+.lunch-cell {
+  background-color: #ffcc80;
+  color: #000 !important;
+  font-weight: bold;
+}
+/* Hover effect for timetable cells */
+.timetable td:hover {
+  background-color: #e3f2fd; /* Light blue highlight */
+  cursor: pointer;
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for header cells */
+.timetable th:hover {
+  background-color: #1565c0; /* Darker blue */
+  cursor: default;
+}
