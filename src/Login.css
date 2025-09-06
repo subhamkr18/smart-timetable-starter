@@ -5,22 +5,17 @@ body {
   background: linear-gradient(135deg, #ffd6e0, #f9f7d9, #d6f8d6, #c3bef0);
   background-size: 300% 300%;
   animation: gradientBG 8s ease infinite;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 @keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Login box */
@@ -30,6 +25,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   width: 350px;
+  max-width: 90%;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
 }
@@ -65,9 +61,9 @@ select {
 
 /* Custom styled select */
 select {
-  text-align: center;       /* Center placeholder and values */
+  text-align: center;
   text-align-last: center;
-  appearance: none;         /* Remove default arrow */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
@@ -105,12 +101,45 @@ button:hover {
 
 /* Fade animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .login-box {
+    width: 70%;
+    padding: 30px 25px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  h2 { font-size: 20px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    min-height: auto;
   }
+
+  .login-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+
+  h2 { font-size: 18px; margin-bottom: 15px; }
+  label { font-size: 13px; }
+  input, select, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  button { font-size: 15px; }
 }
