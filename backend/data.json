@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "hashed_password": "$2b$12$uo9Nd5DMqrMJkO.AMqMXvuB8s9qdPwEHyqypcXk7/YUk81d44utr6",
+      "role": "admin",
+      "name": "Super Admin"
+    }
+  ],
+  "config": {},
+  "rooms": [],
+  "teachers": [],
+  "batches": [],
+  "subjects": [],
+  "latest_timetable": []
+}
